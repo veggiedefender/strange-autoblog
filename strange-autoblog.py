@@ -31,7 +31,8 @@ def getStranges(r, url):
     return stranges
 
 with open("id.txt", "a+") as f:
-    targetID = f.readline()
+    blogName = f.readline().rstrip()
+    targetID = f.readline().rstrip()
 r = requests.get("https://steamcommunity.com/id/%s/inventory/json/440/2" % url).json()
 if targetID == "":
     print "Getting Inventory..."
@@ -46,7 +47,9 @@ if targetID == "":
         print "[%s] %s - %s kills" % (i, name, kills)
     
     targetID = stranges[int(raw_input("Which strange do you want to track? "))]
+    blogName = raw_input("What blog do you want to post to (probably case sensitive)? ")
     with open("id.txt", "a+") as f:
+        f.write(blogName + "\n")
         f.write(targetID)
 
 target = getID(r, targetID)
@@ -60,7 +63,7 @@ while True:
         kills = int(re.findall(p, r["rgDescriptions"][target]["type"])[0])
         if kills > prev:
             bodyText = "I've killed %s people with my %s!" % (kills, name)
-            client.create_text("veggiedefender", state="published", slug=str(kills), title=str(kills), body=bodyText)
+            client.create_text(blogName, state="published", slug=str(kills), title=str(kills), body=bodyText)
         prev = kills
     except ValueError:
         print "Steam may be down."
