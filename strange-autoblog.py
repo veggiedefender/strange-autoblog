@@ -14,10 +14,9 @@ client = pytumblr.TumblrRestClient(
     'oauth token',
     'oauth secret',
 )
-
-p = re.compile(ur'\d+')
 url = "YOUR CUSTOM URL GOES HERE"
 
+p = re.compile(ur'\d+')
 
 def getID(r, item):
     itemID = r["rgInventory"][item]["classid"] + "_" + r["rgInventory"][item]["instanceid"]
