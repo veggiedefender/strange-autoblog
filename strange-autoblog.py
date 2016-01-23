@@ -1,3 +1,8 @@
+#Made by veggiedefender
+#Contact me if you have any issues
+#/u/veggiedefender on reddit
+#/id/veggiedefender on steam
+
 import requests
 import re
 import pytumblr
@@ -11,7 +16,7 @@ client = pytumblr.TumblrRestClient(
 )
 
 p = re.compile(ur'\d+')
-url = "veggiedefender"
+url = "YOUR CUSTOM URL GOES HERE"
 
 
 def getID(r, item):
