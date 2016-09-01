@@ -1,6 +1,6 @@
 # Strange Autoblog
 
-##What ihttps://github.com/veggiedefender/strange-autoblog/issuess this?
+##What is this?
 
 A script based on [this comic](http://www.teamfortress.com/macupdate/comic/). Specifically, this panel:
 
