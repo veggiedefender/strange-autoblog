@@ -18,17 +18,17 @@ I can understand not wanting to read my messy, undocumented code.
 
 You'll need to register an app [here](https://www.tumblr.com/oauth/register) and get your keys [here](https://api.tumblr.com/console/calls/user/info)
 
-Fill out the relevant info in this block of code: `client = pytumblr.TumblrRestClient(...)` as well as the URL of the blog 
+Fill out the relevant info in this block of code: `client = pytumblr.TumblrRestClient(...)`.
 
 ###Pull up your steam URL. 
 
-Get your custom steam url and give it to the `url` variable. Mine looks like `url=veggiedefender` since [this](http://steamcommunity.com/id/veggiedefender/) is my steam profile.
+Get your custom steam url and give it to the `url` variable. Mine looks like `url="veggiedefender"` since [this](http://steamcommunity.com/id/veggiedefender/) is my steam profile.
 
 ###Do you want to use milestones?
 
 In addition to updating your blog with your kill count, you also have the option of updating it every time your weapon passes a [milestone](https://wiki.teamfortress.com/wiki/Strange#Ranks)
 
-Change `useMilestones` to `True` if you want it, or leave it at `False` if you don't.
+Set `useMilestones` to `True` if you want it, or leave it at `False` if you don't.
 
 ###Install the requirements
 
